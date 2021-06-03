@@ -6,11 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
-public class AdminProtectedRestController {
-
-    @GetMapping("/hiddenmessage")
-    public ResponseEntity<?> getAdminProtectedGreeting() {
-        return ResponseEntity.ok("this is a hidden message!");
+@RequestMapping("/public")
+public class NoneProtectedController {
+    @GetMapping("/message")
+    public ResponseEntity<?> getGetMessage() {
+        return ResponseEntity.ok("this is a none protected message!");
     }
 }
